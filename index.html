@@ -11,19 +11,49 @@
     <div class="headings">
         <p>WELCOME TO THIS CBT EXAMS</p>
         <P>ENTER YOUR NAME TO CONTINUE</P>
-        <p>Name: <input type="text" class="name" id="dfghjkl"> <button onclick="Submit_Name()">Submit</button></p>
-        <h1></h1>
+        <p id="Name_space">
+            Name: 
+            <input type="text" class="name" id="dfghjkl"> 
+            <button onclick="Submit_Name()">Submit</button>
+        </p>
+        <h1 id="examiner"></h1>
         <P>Instruction: 
             <br> You have 1minute(60s) to complete 
             <br>Attempt all questions 
             <br> Your exam starts once you click the button below
         </P>
 
-        <BUTton>START EXAM</BUTton>
+        <button class="start_exam" id="start_exam" onclick="startExam()" disabled>START EXAM</button>
     </div>
 
-    <div class="exam_body">
-        <h1>Hi, This is the exam body</h1>
+    <div class="exam_body" id="exam_body">
+        <h4>Hi, Good Luck!!</h>
+        <div class="timer">Time left: <span id="time_left">60</span>s</div>
+
+        <form id="examForm">
+        <div class="question">
+            <p>1. What is 2 + 2?</p>
+            <label><input type="radio" name="q1" value="3"> 3</label><br>
+            <label><input type="radio" name="q1" value="4"> 4</label><br>
+            <label><input type="radio" name="q1" value="5"> 5</label>
+        </div>
+
+        <div class="question">
+            <p>2. What is the capital of France?</p>
+            <label><input type="radio" name="q2" value="London"> London</label><br>
+            <label><input type="radio" name="q2" value="Paris"> Paris</label><br>
+            <label><input type="radio" name="q2" value="Berlin"> Berlin</label>
+        </div>
+
+        <div class="question">
+            <p>3. Which one is a JavaScript framework?</p>
+            <label><input type="radio" name="q3" value="Laravel"> Laravel</label><br>
+            <label><input type="radio" name="q3" value="React"> React</label><br>
+            <label><input type="radio" name="q3" value="Django"> Django</label>
+        </div>
+
+        <button type="button" onclick="submitExam()">Submit</button>
+        </form>
     </div>
 </body>
 </html>

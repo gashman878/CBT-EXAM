@@ -1,0 +1,19 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+.headings{
+    text-align: center;
+}
+.Name_space{
+    display: none;
+}
+#exam_body{
+    border: 2px solid black;
+    width: 300px;
+    margin: auto;
+}
+.exam_body{
+    display: none;
+}
