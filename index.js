@@ -95,5 +95,7 @@ function submitExam(auto = false) {
     console.log("Score:", score);
     console.log("Mismatches:", mismatches);
     console.log("Similarity:", similarityPercentage + "%");
+
+    document.getElementById('Score_Hero').innerHTML = `Your Score is: ${score}/12 (${similarityPercentage}%) `;
 }
 
