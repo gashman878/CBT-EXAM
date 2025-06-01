@@ -45,7 +45,8 @@ function submitExam(auto = false) {
         result[radio.name] = radio.value;
     });
     console.log(result);
-    return result;
+
+
 
     const answers = {
         q1: "4",
@@ -62,6 +63,37 @@ function submitExam(auto = false) {
         q12: "Enugu",
     };
 
+
     let score = 0;
+
+    const mismatches = [];
+
+    for (const key in answers) {
+        if (result.hasOwnProperty(key)) {
+        if (result[key].toLowerCase().trim() === answers[key].toLowerCase().trim()) {
+            score++;
+        } else {
+            mismatches.push({
+            question: key,
+            submitted: result[key],
+            correct: answers[key]
+            });
+        }
+        } else {
+        mismatches.push({
+            question: key,
+            submitted: "No answer",
+            correct: answers[key]
+        });
+        }
+    }
+
+    const totalQuestions = Object.keys(answers).length;
+    const similarityPercentage = Math.round((score / totalQuestions) * 100);
+
+
+    console.log("Score:", score);
+    console.log("Mismatches:", mismatches);
+    console.log("Similarity:", similarityPercentage + "%");
 }
 
