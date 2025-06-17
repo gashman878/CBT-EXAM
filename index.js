@@ -35,6 +35,14 @@ function examTime() {
     }, 1000);
 }
 
+function submitModal() {
+    document.getElementById('submit').style.display = "block";
+}
+
+function closeSubmit() {
+    document.getElementById('submit').style.display = "none";
+}
+
 function submitExam(auto = false) {
     clearInterval(timeInterval);
     document.getElementById('examForm').querySelectorAll('input').forEach(input =>{input.disabled = true;})
@@ -87,6 +95,11 @@ function submitExam(auto = false) {
         });
         }
     }
+
+    document.getElementById('submit').style.display = "none";
+    document.querySelector('.submitBtn').innerHTML = "Your exam have been Submitted.";
+    document.querySelector('.submitBtn').disabled = true;
+
 
     const totalQuestions = Object.keys(answers).length;
     const similarityPercentage = Math.round((score / totalQuestions) * 100);
