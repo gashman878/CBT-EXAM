@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBT Off-Canvas Menu</title>
+    <style>
+        /* Match your existing CBT styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Off-canvas trigger button */
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #4a6fa5;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            z-index: 100;
+            font-weight: 600;
+        }
+        
+        /* Off-canvas menu */
+        .off-canvas {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 250px;
+            height: 100vh;
+            background-color: white;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: left 0.3s ease;
+        }
+        
+        /* When menu is active */
+        .off-canvas.active {
+            left: 0;
+        }
+        
+        /* Push content when menu is open */
+        body.menu-active {
+            transform: translateX(250px);
+        }
+        
+        /* Menu header */
+        .menu-header {
+            background-color: #4a6fa5;
+            padding: 20px;
+            color: white;
+        }
+        
+        .menu-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        
+        /* Menu links */
+        .menu-links {
+            padding: 20px 0;
+        }
+        
+        .menu-links a {
+            display: block;
+            padding: 15px 20px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .menu-links a:hover {
+            background-color: #f0f4f9;
+            color: #4a6fa5;
+            padding-left: 25px;
+        }
+        
+        /* Close button */
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu Trigger Button -->
+    <button class="menu-toggle">☰ Menu</button>
+    
+    <!-- Off-Canvas Menu -->
+    <div class="off-canvas">
+        <div class="menu-header">
+            <h3>Exam Navigation</h3>
+            <button class="close-btn">×</button>
+        </div>
+        <div class="menu-links">
+            <a href="#">Dashboard</a>
+            <a href="#">Current Exam</a>
+            <a href="#">Results</a>
+        </div>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const offCanvas = document.querySelector('.off-canvas');
+        const closeBtn = document.querySelector('.close-btn');
+        const body = document.body;
+        
+        menuToggle.addEventListener('click', () => {
+            offCanvas.classList.add('active');
+            body.classList.add('menu-active');
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            offCanvas.classList.remove('active');
+            body.classList.remove('menu-active');
+        });
+    </script>
+</body>
+</html>

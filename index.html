@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
     <title>MockExam - Computer Based Testing Platform</title>
 </head>
 <body>
@@ -12,14 +13,33 @@
         <div class="container">
             <nav>
                 <div class="logo">Mock<span>Exam</span></div>
-                <div class="nav-links">
-                    <a href="#features">Features</a>
-                    <a href="#testimonials">Testimonials</a>
-                    <a href="#contact">Contact</a>
+                <div class="nav-link">
+                    <div class="nav-links">
+                        <a href="#features">Features</a>
+                        <a href="#testimonials">Testimonials</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    
+                    <button class="menu-toggle" onclick="Menu()">☰ Menu</button>
                 </div>
+
+                
             </nav>
         </div>
     </header>
+    
+    <!-- Off Canvas -->
+    <div class="off-canvas">
+        <div class="menu-header">
+            <h3>Exam Navigation</h3>
+            <button class="close-btn">×</button>
+        </div>
+        <div class="menu-links">
+            <a href="#">Dashboard</a>
+            <a href="#">Current Exam</a>
+            <a href="#">Results</a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
