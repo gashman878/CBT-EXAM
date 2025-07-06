@@ -10,7 +10,7 @@ function Submit_Name() {
     }
     document.querySelector('.start_exam').disabled = false;
     document.getElementById('Name_space').classList.add('Name_space');
-    document.getElementById('examiner').innerHTML = `<p>WELCOME, ${name.value}</p>`;
+    document.getElementById('examiner').innerHTML = `<h1 class="entered_name">${name.value}</h1>`;
 
 
     name.value = "";

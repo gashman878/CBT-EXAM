@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>MockExam - Computer Based Testing Platform</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Mock<span>Exam</span></div>
+                <div class="nav-links">
+        
+                    
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <section class="hero">
+        <div class="container">
+            <h1>WELCOME TO THIS CBT EXAMS</h1>
+            <!-- <p>Take exams with our intuitive CBT platform designed for educational institutions and corporate training.</p> -->
+            <P>ENTER YOUR NAME TO CONTINUE</P>
+            <div id="Name_space">
+                <div class="space_holder">
+                    <label for="" class="name_label">Name:</label>
+                    <input type="text" class="name" id="dfghjkl"> 
+                    <button id="submit_btn" onclick="Submit_Name()">Submit</button>
+                </div>
+            </div>
+            <p id="examiner"></p>
+
+
+            <P>Instruction: 
+                <br> You have 1minute(60s) to complete 
+                <br>Attempt all questions 
+                <br> Your exam starts once you click the button below
+            </P>
+            <button class="start_exam" id="start_exam" onclick="startExam()" disabled>      START EXAM
+            </button>
+        </div>
+    </section>
+
+
+
+    <div class="exam_body" id="exam_body">
+        <h4>Hi, Good Luck!!</h>
+        <div class="timer">Time left: <span id="time_left">62</span>s</div>
+
+        <form id="examForm">
+            <div class="question">
+                <p>1. What is 2 + 2?</p>
+                <label><input class="myRadio" type="radio" name="q1" value="3"> 3</label><br>
+                <label><input class="myRadio" type="radio" name="q1" value="4"> 4</label><br>
+                <label><input class="myRadio" type="radio" name="q1" value="5"> 5</label>
+            </div>
+
+            <div class="question">
+                <p>2. What is the capital of France?</p>
+                <label><input class="myRadio" type="radio" name="q2" value="London"> London</label><br>
+                <label><input class="myRadio" type="radio" name="q2" value="Paris"> Paris</label><br>
+                <label><input class="myRadio" type="radio" name="q2" value="Berlin"> Berlin</label>
+            </div>
+
+            <div class="question">
+                <p>3. What is the capital of Nigeria?</p>
+                <label><input class="myRadio" type="radio" name="q3" value="Lagos"> Lagos</label><br>
+                <label><input class="myRadio" type="radio" name="q3" value="Abuja"> Abuja</label><br>
+                <label><input class="myRadio" type="radio" name="q3" value="Enugu"> Enugu</label>
+            </div>
+
+            <div class="question">
+                <p>4. Who is the richest man is Nigeria?</p>
+                <label><input class="myRadio" type="radio" name="q4" value="Otedola"> Otedola</label><br>
+                <label><input class="myRadio" type="radio" name="q4" value="Davido"> Davido</label><br>
+                <label><input class="myRadio" type="radio" name="q4" value="Dangote"> Dangote</label>
+            </div>
+
+            <div class="question">
+                <p>5. Which year did Nigeria become a republic</p>
+                <label><input class="myRadio" type="radio" name="q5" value="1960"> 1960</label><br>
+                <label><input class="myRadio" type="radio" name="q5" value="1963"> 1963</label><br>
+                <label><input class="myRadio" type="radio" name="q5" value="2002"> 2002</label>
+            </div>
+
+            <div class="question">
+                <p>6. What is the opposite of heavy?</p>
+                <label><input class="myRadio" type="radio" name="q6" value="Light"> Light</label><br>
+                <label><input class="myRadio" type="radio" name="q6" value="Small"> Small</label><br>
+                <label><input class="myRadio" type="radio" name="q6" value="Thing"> Thing</label>
+            </div>
+
+            <div class="question">
+                <p>7. How many letters makes up the English alphabet?</p>
+                <label><input class="myRadio" type="radio" name="q7" value="24"> 24</label><br>
+                <label><input class="myRadio" type="radio" name="q7" value="26"> 26</label><br>
+                <label><input class="myRadio" type="radio" name="q7" value="32"> 32</label>
+            </div>
+
+            <div class="question">
+                <p>8 . What is the popular Nigerian meal made from cassava flakes?</p>
+                <label><input class="myRadio" type="radio" name="q8" value="Corn flakes"> Fufu</label><br>
+                <label><input class="myRadio" type="radio" name="q8" value="Golden mourn"> Golden mourn</label><br>
+                <label><input class="myRadio" type="radio" name="q8" value="Garri"> Garri</label>
+            </div>
+            
+            <div class="question">
+                <p>9. What is the name of Nigeria’s national football team?</p>
+                <label><input class="myRadio" type="radio" name="q9" value="Nigeria Fc"> Nigeria Fc</label><br>
+                <label><input class="myRadio" type="radio" name="q9" value="Super Eagles"> Super eagles</label><br>
+                <label><input class="myRadio" type="radio" name="q9" value="Enugu Rangers"> Enugu rangers</label>
+            </div>
+
+            <div class="question">
+                <p>10. What month is usually the rainy season peak in Nigeria’s south?</p>
+                <label><input class="myRadio" type="radio" name="q10" value="June"> June</label><br>
+                <label><input class="myRadio" type="radio" name="q10" value="July"> July</label><br>
+                <label><input class="myRadio" type="radio" name="q10" value="August"> August</label>
+            </div>
+
+            <div class="question">
+                <p>11. What’s the common Nigerian name for motorcycles used for transport?</p>
+                <label><input class="myRadio" type="radio" name="q11" value="Keke"> Keke</label><br>
+                <label><input class="myRadio" type="radio" name="q11" value="Bolt"> Bolt</label><br>
+                <label><input class="myRadio" type="radio" name="q11" value="Okada"> Okada</label>
+            </div>
+
+            <div class="question">
+                <p>12. Which state is known as the “Coal City State”?</p>
+                <label><input class="myRadio" type="radio" name="q12" value="Enugu"> Enugu</label><br>
+                <label><input class="myRadio" type="radio" name="q12" value="Calabar"> Calabar</label><br>
+                <label><input class="myRadio" type="radio" name="q12" value="kogi"> kogi</label>
+            </div>
+
+            
+
+            
+        </form>
+        <button type="button" onclick="submitModal()" class="submitBtn start_exam">submitExam</button>
+
+        <div id="submit" class="submit">
+
+                <h3>Are you sure you want to submit ?</h3>
+                <button onclick="closeSubmit()" class="start_exam">No, don't submit yet</button>
+                <button onclick="submitExam()" class="start_exam">Submit Exam</button>
+
+            </div>
+
+        <h1 id="Score_Hero"></h1>
+    </div>
+
+
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>MockExam</h3>
+                    <p>Leading computer-based testing platform for education and professional certification.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Email: gashman878@gmail.com</li>
+                        <li>Phone: 0814-089-4435</li>
+                        <li>Address: Futo, Imo State</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 MockExam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
