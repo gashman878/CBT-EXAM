@@ -197,7 +197,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 1200px;
+    width: 1000px;
     gap: 20px;
     margin: 20px 0;
     padding: 50px 0;
@@ -423,17 +423,17 @@ footer {
         font-weight: 600;
     }
     #examForm{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
     }
 
     
 }
 
-}
+
 
 
 

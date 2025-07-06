@@ -83,7 +83,7 @@ function submitExam(auto = false) {
     selected.forEach(radio => {
         result[radio.name] = radio.value;
     });
-    console.log(result);
+    
     const answers = {
         q1: "4",
         q2: "Paris",
